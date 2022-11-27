@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { FiChevronRight, FiChevronLeft } from "react-icons/fi";
 import { FaQuoteRight } from "react-icons/fa";
 import data from "./data";
 function App() {
@@ -18,7 +18,7 @@ function App() {
           // more stuff coming up
 
           return (
-            <article>
+            <article key={id}>
               <img src={image} alt={name} className="person-img" />
               <h4>{name}</h4>
               <p className="title">{title}</p>
@@ -27,6 +27,12 @@ function App() {
             </article>
           );
         })}
+        <button className="prev">
+          <FiChevronLeft />
+        </button>
+        <button className="next">
+          <FiChevronRight />
+        </button>
       </div>
     </section>
   );
