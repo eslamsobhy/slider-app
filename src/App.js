@@ -18,7 +18,7 @@ function App() {
           // more stuff coming up
 
           return (
-            <article key={id}>
+            <article key={id} className="nextSlide">
               <img src={image} alt={name} className="person-img" />
               <h4>{name}</h4>
               <p className="title">{title}</p>
