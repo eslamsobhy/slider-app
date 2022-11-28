@@ -11,6 +11,9 @@ function App() {
     if (index < 0) {
       setIndex(lastIndex);
     }
+    if (index > lastIndex) {
+      setIndex(0);
+    }
   }, [index, people]);
   return (
     <section className="section">
@@ -43,7 +46,7 @@ function App() {
         <button className="prev" onClick={() => setIndex(index - 1)}>
           <FiChevronLeft />
         </button>
-        <button className="next" onClick={() => setIndex((index + 1) % 4)}>
+        <button className="next" onClick={() => setIndex(index + 1)}>
           <FiChevronRight />
         </button>
       </div>
